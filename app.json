@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "FestScan",
+    "slug": "fest-scan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "FestScan uses the camera to scan festival posters."
+      },
+      "bundleIdentifier": "com.k-arl-c.fest-scan"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "FestScan uses the camera to scan festival posters."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "FestScan uses your photo library so you can scan a poster you've already saved."
+        }
+      ]
+    ]
+  }
+}
